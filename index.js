@@ -8,10 +8,11 @@ async function start(){
         const page = await browser.newPage()
  
         await page.goto(URL)
-        await page.waitFor(3000);
+        await page.waitForSelector("#MainContent_ctl32_rdoPollOptionList_2");
         await page.click("#MainContent_ctl32_rdoPollOptionList_2");
+        await page.waitForSelector("#MainContent_ctl32_btnVote");
         await page.click("#MainContent_ctl32_btnVote");
-        await page.waitFor(15000);//
+        await page.waitFor(5000);
         await browser.close();
  
     } catch (error) {
