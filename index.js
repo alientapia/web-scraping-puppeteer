@@ -12,6 +12,7 @@ async function start(){
         await page.click("#MainContent_ctl32_rdoPollOptionList_2");
         await page.waitForSelector("#MainContent_ctl32_btnVote");
         await page.click("#MainContent_ctl32_btnVote");
+        await page.waitForSelector("#MainContent_ctl32_voto_hecho");
         await page.waitFor(5000);
         await browser.close();
  
